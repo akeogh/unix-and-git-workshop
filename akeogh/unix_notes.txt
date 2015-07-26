@@ -1,0 +1,81 @@
+NAVIGATING THE FILE SYSTEM
+
+    absolute when it starts with a "/"
+
+    COMMAND for moving directories is "cd"
+
+        supply a path, tell terminal where you want to go (change directory)
+
+    COMMAND "pwd" "present working directory"
+
+    "/" "God directory"
+
+    COMMAND "ls" - lists files of present working directory. Can be modified: providing flags (t, l) i.e. "ls -l" or "ls -lt" (can stack flags)
+
+        "r" flag reverses. Can be used on its own or combined. ("ls -lr")
+
+        "l" "long format"
+
+        "t" modification time
+
+    flags  are provided by using the - sign after the command
+
+    COMMAND "man" short for manual'
+
+        How you can find what flags/commands may be used
+
+        will provide manual with how the command works and what options it provides (i.e. "man ls")
+
+        "q" FOR QUIT
+
+    Note: Command line expects paths to be a single continuous string of characters. spaces delimit one element from the next. You can escape a space with a "\" i.e. "$ cd /c/Users/Cris\ Ewing"
+
+        Yuck.
+
+    Linus IS case sensitive; OSX, Windows case insensitive. Power users write in lower case.
+
+        Naming conventions: avoid spaces, use dashes/underscores, prefer lowercase.
+
+    Relative paths: relative to where you are now.
+
+    ".." used to navigate one level above current directory. Can chain: "../.." etc. "." means current directory.
+
+    "cd" can always take you back to the root directory, and "~" always replaced by the absolute path of your root dir.
+
+        FISH FILLS IN THE BLANKS: Without fish, NEED the "cd" command
+
+
+
+
+
+MODIFYING THE FILESYSTEM
+
+    Make, Move, Modify!
+
+    Pipe character: "|" takes output from first command and uses it as input to second command i.e. "$history | less"). Allows savvy user to combine commands into complex processes with little effort (but a lot of understanding)
+
+    Unix Philosophy: Do one thing and do it well - every output can become the input of another program
+
+    COMMAND less allows the user to control movement through the reading of a file - provides control for moving forward or backward through files at increments of an arbitrary number of lines or screens
+
+    > redirection operator. How to write history to a file:
+
+        $history > moving_around.txt
+
+        Creates file if it doesn't exist; rewrites if it does
+
+        >> rewrites
+
+        Google bash redirection  for more options;
+
+    COMMAND "mkdir" - "make directory" i.e. "mkdir uge_workshop"
+
+    COMMAND "mv" "move" - i.e. mv moving_around.txt uge_workshop"
+
+        First argument: thing you want to move; second: where you want to move it
+
+        ALSO how we rename a file. "mv file1.txt file2.txt" will leave only file2.txt with file1.txt's contents.
+
+    COMMAND "touch" - make a new file, blank
+
+    COMMAND "pbcopy" - copies the contents of a file

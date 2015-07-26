@@ -1,0 +1,63 @@
+    Version Control: allow us to keep a history of our work on a project safe, collaborate with others.
+
+    Start by creating a repository!
+
+
+
+CREATING A LOCAL REPOSITORY
+
+    COMMAND "git init" - initialize a new repository
+
+        in fish, will show a "master" icon when you're in/near a repo (repos are separate from the directory file)
+
+    Workflow: Modify file --> Add --> Commit
+
+        not added file "dirty" or "unstaged"
+
+        Add: "staging" area; Happy with how things look, moving it to the stage before full integration
+
+    COMMAND "add" - i.e "git add unix_notes.txt"
+
+    COMMAND "status" - i.e. "git status"--tells you latest changes (new files, etc.)
+
+        Always check status: good habit to develop
+
+    Being informative: Provide descriptions of your changes - default is in present tense
+
+    COMMAND "commit" - i.e. "git commit -m "adds blah blah blah"
+
+        "-m" flag allows you to add comment right in the command line. If you don't use -m, it will open a text editor for you to creat the message.
+
+    COMMAND "log" - shows commit logs, including unique id
+
+        lots of options for this - check out viewing the command history book, git user book
+
+    COMMAND " show" - i.e. "git show [UNIQUE ID]" shows details of that particular git commit
+
+    The git "head" is the version of the file you're on NOW. Also called "master". First "Branch" in repository.
+
+        Every time you make a new commit, you add a new "Node" to the chain.
+
+    COMMAND branch i.e. "git branch git-notes" - creates a new branch called git-notes.
+
+        "git branch" will show a list of all current branches
+
+    COMMAND checkout i.e. "git checkout git-notes" - switch to another branch
+
+
+
+INTEGRATING WITH GITHUB
+
+    COMMAND "git remote add origin [SSH KEY]" - found in the info page for a repo you've ALREADY CREATED in github (looks like git@github.com:akeogh/uge-workshop-amandakeogh.git)
+
+        "origin" is now shorthand for github's repository
+
+    COMMAND "git push -u origin master" -
+
+        we're PUSHING the CURRENT BRANCH to ORIGIN's [BRANCH] - create a new branch or add to a non-master branch by changing "master", i.e. "git push -u origin foo"
+
+        -u asks the command line to track changes happening up on github (like someone updating the branch I'm working on/master, etc.
+
+    COMMAND "git pull origin master" - BE IN MASTER BRANCH, you are PULLING changes from github to your local machine
+
+    COMMAND "clone" creates a new directory and clones an existing repo on github with a URL (i.e. "git@github.com:akeogh/uge-workshop-thomaskeefe.git")
